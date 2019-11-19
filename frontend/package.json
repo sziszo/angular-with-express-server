@@ -3,11 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --proxy-config proxy.conf.json",
-    "build": "ng build",
+    "start": "node server.js",
+    "build": "npm run build:language-bundles",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "extract-i18n": "ng xi18n --output-path locale && node ./node_modules/ngx-i18nsupport/dist/xliffmerge/xliffmerge",
+    "build:language-bundles": "ng run frontend:build:production-en && ng run frontend:build:production-hu && ng run frontend:build:production-de"
   },
   "private": true,
   "dependencies": {
@@ -25,6 +27,7 @@
     "express": "^4.17.1",
     "http-proxy": "^1.18.0",
     "memory-cache": "^0.2.0",
+    "ngx-i18nsupport": "^0.17.1",
     "request": "^2.88.0",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
@@ -50,5 +53,20 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.2.2"
+  },
+  "xliffmergeOptions": {
+    "srcDir": "src/locale",
+    "genDir": "src/locale",
+    "i18nFile": "messages.xlf",
+    "i18nBaseFile": "messages",
+    "i18nFormat": "xlf",
+    "encoding": "UTF-8",
+    "defaultLanguage": "en",
+    "languages": [
+      "en",
+      "hu",
+      "de"
+    ],
+    "verbose": true
   }
 }

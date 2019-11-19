@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template" target-language="hu">
+    <body>
+      <trans-unit id="7ea5c81554bf152ef9d145e22e82f0b073b04241" datatype="html">
+        <source>hello works!</source><target state="new">hello működik!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/hello/hello.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
