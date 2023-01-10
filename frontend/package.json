@@ -25,7 +25,7 @@
     "compression": "^1.7.3",
     "core-js": "^2.5.4",
     "express": "^4.17.3",
-    "http-proxy": "^1.18.0",
+    "http-proxy": "^1.18.1",
     "memory-cache": "^0.2.0",
     "ngx-i18nsupport": "^0.17.1",
     "request": "^2.88.0",
